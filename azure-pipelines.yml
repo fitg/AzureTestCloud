@@ -16,9 +16,12 @@ variables:
 
 steps:
 
-- task: DotNetCoreInstaller@0
+- task: NuGetCommand@2
   inputs:
-    version: '2.2.300'
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+    vstsFeed: '/6c587e30-3391-414e-808c-b8203f304517'
 
 - task: DotNetCoreCLI@2
   inputs:
