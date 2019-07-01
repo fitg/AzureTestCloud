@@ -16,10 +16,6 @@ variables:
 
 steps:
 
-- task: CmdLine@2
-  inputs:
-    script: 'dotnet add AzureTestCloud/AzureTestCloud.ccproj package MSBuild.Microsoft.VisualStudio.Web.targets --version 14.0.0.3'
-
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
